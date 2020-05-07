@@ -27,7 +27,7 @@ saver=tf.train.Saver(max_to_keep=1)
 with tf.Session() as sess:
     if cfg.params["restore"]==True:
         saver.restore(sess,latest_checkpoint)
-        offset_epoch=0
+        offset_epoch=int(latest_checkpoint.spilt("=")[1].split(".")[0])
     else:
         sess.run(tf.global_variables_initializer())
 

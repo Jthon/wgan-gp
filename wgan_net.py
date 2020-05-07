@@ -11,7 +11,7 @@ class Wgan_network:
             self.image_input=tf.placeholder(dtype=tf.float32,shape=[None,32,32,3])
             self.pad_image_input=self.image_input
         self.__BuildNet__()
-        #self.d_loss,self.g_loss,self.d_train_op,self.g_train_op=self.__lossTrain__(self.fake_logit,self.real_logit)
+        
         self.loss_summary,self.image_summary=self.__logger__(self.fake,self.d_loss,self.g_loss)
 
     def __discriminator__(self,image_input):
