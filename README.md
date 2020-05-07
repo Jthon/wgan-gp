@@ -6,7 +6,7 @@ An tensorflow implementation of Paper ["Improved Training of Wasserstein GANs"](
 ## Architecture
 #### Generator
 noise_input:dim=128 <br>
-fc: noise_input->dim=4*4*256,relu <br>
+fc: noise_input->dim=4$$\times$$4$$\times$$256,relu <br>
 decnn1: fc->dim=8*8*128,ksize=5,strides=2,relu <br>
 decnn2: decnn1->dim=16*16*64,ksize=5,strides=2,relu <br>
 output: decnn2->dim=32*32*1(3 for cifar),ksize=5,strides=2,tanh <br>
@@ -24,7 +24,7 @@ gp_lambda=10 <br>
 critic_iter=5 <br>
 ## Result
    |epoch=1|epoch=20|g_loss|d_loss
----|:--:|---:|---:
+---|:--:|---:|---:|---:
 mnist|![mnist_epoch=1](https://github.com/Jthon/wgan-gp/blob/master/result/mnist/epoch%3D1.jpg)|![mnist_epoch=20](https://github.com/Jthon/wgan-gp/blob/master/result/mnist/epoch%3D20.jpg)|内容|内容|
 cifar|![cifar_epoch=1](https://github.com/Jthon/wgan-gp/blob/master/result/cifar/epoch%3D1.jpg)|![cifar_epoch=20](https://github.com/Jthon/wgan-gp/blob/master/result/cifar/epoch%3D20.jpg)|内容|内容|
 
