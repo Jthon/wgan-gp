@@ -24,7 +24,7 @@ gp_lambda=10 <br>
 critic_iter=5 <br>
 ## Result
 ||epoch=1|epoch=20|g_loss|d_loss
----|:--:|---:|---:|---:|
+---|:--:|:--:|:--:|:--:|
 mnist|![mnist_epoch=1](https://github.com/Jthon/wgan-gp/blob/master/result/mnist/epoch%3D1.jpg)|![mnist_epoch=20](https://github.com/Jthon/wgan-gp/blob/master/result/mnist/epoch%3D20.jpg)|![mnist_g_loss](https://github.com/Jthon/wgan-gp/blob/master/result/mnist_g.png)|![mnist_d_loss](https://github.com/Jthon/wgan-gp/blob/master/result/mnist_d.png)|
 cifar|![cifar_epoch=1](https://github.com/Jthon/wgan-gp/blob/master/result/cifar/epoch%3D1.jpg)|![cifar_epoch=20](https://github.com/Jthon/wgan-gp/blob/master/result/cifar/epoch%3D20.jpg)|![cifar_g_loss](https://github.com/Jthon/wgan-gp/blob/master/result/cifar_g.png)|![cifar_d_loss](https://github.com/Jthon/wgan-gp/blob/master/result/cifar_d.png)|
 
