@@ -5,23 +5,23 @@ An tensorflow implementation of Paper ["Improved Training of Wasserstein GANs"](
 [cifar10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html) <br>
 ## Architecture
 #### Generator
-noise_input:dim=128 <br>
-fc: noise_input->dim=4x4x256,relu <br>
-decnn1: fc->dim=8x8x128,ksize=5,strides=2,relu <br>
-decnn2: decnn1->dim=16x16x64,ksize=5,strides=2,relu <br>
-output: decnn2->dim=32x32x1(3 for cifar),ksize=5,strides=2,tanh <br>
+**noise_input**:dim=128 <br>
+**fc**: noise_input->dim=4x4x256,relu <br>
+**decnn1**: fc->dim=8x8x128,ksize=5,strides=2,relu <br>
+**decnn2**: decnn1->dim=16x16x64,ksize=5,strides=2,relu <br>
+**output**: decnn2->dim=32x32x1(3 for cifar),ksize=5,strides=2,tanh <br>
 #### Critic
-image_input:dim=32x32x1(3 for cifar) <br>
-cnn1:image_input->16x16x64,ksize=5,strides=2,lrelu <br>
-cnn2:cnn1->dim=8x8x128,ksize=5,strides=2,lrelu <br>
-cnn3:cnn2->dim=4x4x256,ksize=5,strides=2,lrelu <br>
-output:cnn3->fc,dim=1 <br>
+**image_input**:dim=32x32x1(3 for cifar) <br>
+**cnn1**:image_input->16x16x64,ksize=5,strides=2,lrelu <br>
+**cnn2**:cnn1->dim=8x8x128,ksize=5,strides=2,lrelu <br>
+**cnn3**:cnn2->dim=4x4x256,ksize=5,strides=2,lrelu <br>
+**output**:cnn3->fc,dim=1 <br>
 ## Hyperparameters
-batch_size=32 <br>
-lr_rate=1e-4  <br>
-optimizer=Adam <br>
-gp_lambda=10 <br>
-critic_iter=5 <br>
+**batch_size**=32 <br>
+**lr_rate**=1e-4  <br>
+**optimizer**=Adam <br>
+**gp_lambda**=10 <br>
+**critic_iter**=5 <br>
 ## Result
 ||epoch=1|epoch=20|g_loss|d_loss
 ---|:--:|:--:|:--:|:--:|
